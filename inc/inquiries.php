@@ -30,7 +30,7 @@ function atelier_handle_inquiry(): void {
         'estimate' => sanitize_text_field(wp_unslash($_POST['estimate'] ?? 'Scope review required')),
         'message' => sanitize_textarea_field(wp_unslash($_POST['message'] ?? '')),
     ];
-    $id = wp_insert_post(['post_type' => 'atelier_inquiry', 'post_status' => 'private', 'post_title' => $name . ' — ' . ($fields['company'] ?: 'Project enquiry'), 'post_content' => $fields['message']]);
+    $id = wp_insert_post(['post_type' => 'atelier_inquiry', 'post_status' => 'private', 'post_title' => $name . ': ' . ($fields['company'] ?: 'Project enquiry'), 'post_content' => $fields['message']]);
     if (!is_wp_error($id)) {
         update_post_meta($id, '_atelier_email', $email);
         foreach ($fields as $key => $value) { update_post_meta($id, '_atelier_' . $key, $value); }
