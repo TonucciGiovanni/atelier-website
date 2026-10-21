@@ -1,0 +1,5 @@
+<?php /* Template Name: Services */ get_header(); ?>
+<main><section class="page-hero"><p class="eyebrow">02 · Services</p><h1>Design. Build. Grow.</h1><p>Three connected offers covering everything needed to create, launch and strengthen your digital presence.</p></section>
+<section class="section"><div class="offer-grid detailed"><?php $descriptions = atelier_service_descriptions(); foreach (atelier_service_groups() as $group): ?><article class="offer-card"><span class="offer-number"><?php echo esc_html($group['number']); ?></span><p class="eyebrow"><?php echo esc_html($group['short']); ?></p><h2><?php echo esc_html($group['title']); ?></h2><p><?php echo esc_html($group['summary']); ?></p><div class="included-services"><?php foreach ($group['services'] as $service): ?><div><h3><?php echo esc_html($service); ?></h3><p><?php echo esc_html($descriptions[$service]); ?></p></div><?php endforeach; ?></div><a href="<?php echo esc_url(atelier_page_url('start-a-project')); ?>">Discuss this offer ↗</a></article><?php endforeach; ?></div></section></main>
+<?php get_footer(); ?>
+

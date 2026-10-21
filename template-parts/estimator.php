@@ -1,0 +1,9 @@
+<section class="section white" id="estimator"><div class="section-head"><p class="eyebrow">Project Planner</p><h2>Get a rough idea before the first call.</h2><p>Choose what is closest to your project. Your final quotation follows a short scope review.</p></div>
+<div class="estimator" data-estimator>
+  <div class="currency-row"><span>Display currency</span><div><?php foreach (['KES','USD','GBP','EUR'] as $currency): ?><button type="button" data-currency="<?php echo esc_attr($currency); ?>"><?php echo esc_html($currency); ?></button><?php endforeach; ?></div></div>
+  <fieldset><legend>Project type</legend><div class="option-row"><button type="button" class="active" data-type="website" data-value="50000">Business Website</button><button type="button" data-type="commerce" data-value="135000">E-commerce Store</button><button type="button" data-type="redesign" data-value="50000">Website Redesign</button><button type="button" data-type="mobile" data-value="manual">Mobile App</button></div></fieldset>
+  <fieldset><legend>Pages</legend><div class="option-row"><button type="button" class="active" data-pages="0">1–3 pages</button><button type="button" data-pages="15000">4–6 pages</button><button type="button" data-pages="30000">7+ pages</button></div></fieldset>
+  <fieldset><legend>Add-ons</legend><div class="option-row multi"><button type="button" data-addon="18000">Copywriting</button><button type="button" data-addon="12000">SEO & Analytics</button><button type="button" data-addon="18000">Launch Marketing</button></div></fieldset>
+  <div class="estimate-result"><strong data-estimate> KES 50,000 – KES 62,500</strong><small>Indicative planning range · Final quotation follows a scope review.</small><a href="<?php echo esc_url(atelier_page_url('start-a-project')); ?>">Continue to the full project brief →</a></div>
+</div></section>
+
